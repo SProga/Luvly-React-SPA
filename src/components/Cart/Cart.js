@@ -75,6 +75,7 @@ const Cart = (props) => {
               alt={item.name}
             />
           </figure>
+
           <div className={classes["card-title"]}>
             <h1>{item.name}</h1>
           </div>
@@ -82,7 +83,7 @@ const Cart = (props) => {
           <div className={classes["card-quantity"]}>
             <p className={classes["card-title--bold"]}>Qty</p>
             <input
-              required
+              className={classes.input}
               type="number"
               min="1"
               max="5"

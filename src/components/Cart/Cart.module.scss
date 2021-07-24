@@ -54,7 +54,7 @@ $height: 40vh;
     text-align: center;
   }
 
-  @include respond(phone) {
+  @include respond(tab-other) {
     display: grid;
     grid-row-gap: 2rem;
     grid-auto-rows: 13rem;
@@ -89,6 +89,7 @@ $height: 40vh;
   &-price {
     font-size: 1.5rem;
     word-wrap: break-word;
+    align-self: flex-end;
     @include respond(phone) {
       grid-row: 2/3;
       grid-column: 2/5;
@@ -105,7 +106,7 @@ $height: 40vh;
     @include respond(phone) {
       grid-column: 2 / -1;
       grid-row: 1/2;
-      text-align: left !important;
+      text-align: left;
       margin-top: 2rem;
       margin-left: 2rem;
     }
@@ -121,10 +122,10 @@ $height: 40vh;
   &-total {
     font-size: 1.5rem;
     word-wrap: break-word;
+    align-self: flex-end;
     @include respond(phone) {
       grid-column: 7/-1;
       grid-row: 2/3;
-      align-self: end;
       justify-self: center;
       font-size: $normal-text;
       text-align: center;
@@ -134,8 +135,9 @@ $height: 40vh;
     font-size: 1.5rem;
     word-wrap: break-word;
     @include respond(phone) {
-      grid-column: 6/7;
+      grid-column: 5/8;
       grid-row: 2/3;
+      text-align: center;
       align-self: end;
       justify-self: center;
       font-size: $normal-text;
@@ -152,7 +154,7 @@ $height: 40vh;
       grid-row: 2/3;
       font-size: $normal-text;
       justify-self: center;
-      align-self: end;
+      align-self: flex-end;
     }
     color: $secondary-color;
   }
@@ -269,3 +271,21 @@ $height: 40vh;
     padding-bottom: 0;
   }
 }
+
+.input {
+  width: 60%;
+  @include respond(phone) {
+    width: 80%;
+  }
+  // flex: 0 0 50%;
+  text-align: center !important;
+}
+
+// input[type="number"] {
+//   -moz-appearance: textfield;
+// }
+// input[type="number"]::-webkit-inner-spin-button,
+// input[type="number"]::-webkit-outer-spin-button {
+//   -webkit-appearance: slider-vertical;
+//   appearance: slider-vertical;
+// }
