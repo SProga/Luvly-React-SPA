@@ -32,6 +32,9 @@
     left: 25%;
     width: 60%;
   }
+  @include respond(tab-land) {
+    top: 5vh;
+  }
 }
 
 @-webkit-keyframes slide-down {

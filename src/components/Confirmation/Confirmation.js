@@ -3,6 +3,7 @@ import classes from "./Confirmation.module.scss";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../../store/Slices/ui-slice";
 import { cartActions } from "../../store/Slices/cart-slice";
+import { sendCartData } from "../../store/Slices/Actions/cart-actions";
 import Success from "./success.svg";
 import Button from "../UI/Button/Button";
 
@@ -12,6 +13,12 @@ const Confirmation = () => {
   const closeConfirmationPage = () => {
     dispatch(uiActions.closeConfirmationPage());
     dispatch(cartActions.resetCart());
+    dispatch(
+      sendCartData({
+        items: [],
+        totalQuantity: 0,
+      })
+    );
   };
 
   return (
