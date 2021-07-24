@@ -81,14 +81,18 @@ const Cart = (props) => {
           </div>
 
           <div className={classes["card-quantity"]}>
-            <p className={classes["card-title--bold"]}>Qty</p>
+            <p className={classes["card-title--bold"]}>
+              Qty
+              <span className={classes.quantityTracker}>{item.quantity}</span>
+            </p>
+
             <input
               className={classes.input}
-              type="number"
+              type="range"
               min="1"
               max="5"
-              value={item.quantity}
               step="1"
+              value={item.quantity}
               onChange={(e) => {
                 changeQuantityHandler(e, item);
               }}

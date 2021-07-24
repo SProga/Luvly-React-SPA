@@ -132,13 +132,17 @@ $height: 40vh;
     }
   }
   &-quantity {
+    position: relative;
     font-size: 1.5rem;
     word-wrap: break-word;
+
     @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
       grid-column: 5/8;
       grid-row: 2/3;
-      text-align: center;
-      align-self: end;
       justify-self: center;
       font-size: $normal-text;
       text-align: center;
@@ -273,19 +277,18 @@ $height: 40vh;
 }
 
 .input {
+  position: relative;
+  top: -13px;
   width: 60%;
   @include respond(phone) {
-    width: 80%;
+    width: 60%;
   }
   // flex: 0 0 50%;
   text-align: center !important;
 }
 
-// input[type="number"] {
-//   -moz-appearance: textfield;
-// }
-// input[type="number"]::-webkit-inner-spin-button,
-// input[type="number"]::-webkit-outer-spin-button {
-//   -webkit-appearance: slider-vertical;
-//   appearance: slider-vertical;
-// }
+.quantityTracker {
+  position: absolute;
+  bottom: -1px;
+  right: 49%;
+}
