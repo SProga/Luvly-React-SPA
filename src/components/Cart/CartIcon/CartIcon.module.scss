@@ -1,0 +1,35 @@
+@import "../../../assets/scss/main.scss";
+
+.cartIcon {
+  position: absolute;
+  top: 2rem;
+  fill: $primary-color;
+  z-index: 999;
+}
+
+.wrapper {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-bottom: 1rem;
+  z-index: 99999;
+  cursor: pointer;
+  @include respond(tab-land) {
+    top: 67%;
+  }
+}
+
+.totalItems {
+  position: absolute;
+  top: 13px;
+  right: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  min-height: 2.6rem;
+  min-width: 2.4rem;
+  color: #fff;
+  z-index: 9999;
+  @include darkGradient;
+}

@@ -1,0 +1,57 @@
+@import "../../../assets/scss/main.scss";
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  z-index: 999999;
+  background-color: rgba(204, 204, 204, 0.945);
+  padding: 0 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: $topModal;
+  left: 6%;
+  position: fixed;
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 30;
+  -webkit-animation: slide-down 300ms ease-out forwards;
+  animation: slide-down 300ms ease-out forwards;
+  z-index: 999999999;
+
+  @include respond(tab-other) {
+    left: 25%;
+    width: 60%;
+  }
+}
+
+@-webkit-keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-3rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

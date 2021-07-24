@@ -1,0 +1,78 @@
+@import "../../assets/scss/main.scss";
+
+.form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  width: 60%;
+  margin: 4rem auto;
+  padding-bottom: 2rem;
+
+  &-title {
+    width: 100%;
+    font-size: $header-text;
+    text-align: left;
+  }
+  .color {
+    color: $primary-color;
+  }
+
+  &-group {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 1rem 0;
+    & > label {
+      font-size: $normal-text;
+    }
+
+    &--inline {
+      display: flex;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      flex-direction: row;
+    }
+  }
+}
+
+.error {
+  color: red;
+  margin: 1rem 0 0 1rem;
+  font-size: 1.2rem;
+}
+
+.form-demo {
+  font-size: 1.6rem;
+  font-weight: 300;
+  font-style: oblique;
+}
+
+input {
+  width: 120%;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  border: 1px solid rgb(236, 234, 234);
+  @include respond(tab-other) {
+    width: 90%;
+  }
+}
+.inline {
+  position: relative;
+}
+.visible {
+  position: absolute;
+  top: 8px;
+  right: -10%;
+  & > img {
+    height: 2rem;
+  }
+  @include respond(tab-other) {
+    top: 8px;
+    right: 13%;
+  }
+}

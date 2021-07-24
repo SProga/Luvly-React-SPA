@@ -1,0 +1,56 @@
+$small: 2rem;
+$medium: 4rem;
+$large: 8rem;
+$extra: 10rem;
+
+.mt-s {
+  margin-top: $small;
+}
+.mt-m {
+  margin-top: $medium;
+}
+.mt-l {
+  margin-top: $large;
+}
+.mt-xl {
+  margin-top: $extra;
+}
+
+.mx-auto {
+  margin: 0 auto;
+}
+.my-auto {
+  margin: auto 0;
+}
+.m-auto {
+  margin: auto auto;
+}
+
+.pl-s {
+  padding-left: $small;
+}
+.pr-s {
+  padding-right: $small;
+}
+
+//medium
+.pl-s {
+  padding-left: $medium;
+}
+.pr-s {
+  padding-right: $medium;
+}
+
+//large
+.pl-s {
+  padding-left: $small;
+}
+.pr-s {
+  padding-right: $small;
+}
+.pr-xl {
+  padding-right: $extra;
+}
+.pl-xl {
+  padding-left: $extra;
+}

@@ -1,0 +1,111 @@
+@import "../../../assets/scss/main.scss";
+
+.btn {
+  padding: 2.2rem 8rem;
+  border-radius: 40px;
+  font-size: 2.3rem;
+  @include darkGradient;
+  color: $color-white-light;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  transition: color 100ms linear;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.btn--cart:disabled {
+  cursor: initial !important;
+  background: #fbc5bf !important;
+  &:hover {
+    background: #fbc5bf !important;
+  }
+}
+.btn--addSmall:disabled {
+  cursor: initial !important;
+  &:hover {
+    color: #fff !important;
+  }
+}
+
+.btn.btn--cart,
+.btn--disabled {
+  min-width: 200px !important;
+  position: relative;
+  padding: 1.5rem 5rem;
+  font-size: 1.4rem;
+  background-image: revert !important;
+  background: #fbc5bf;
+  color: #fff;
+  margin-bottom: 2rem;
+  &:hover {
+    background-color: #d8ada8;
+  }
+}
+.btn--disabled {
+  background-color: #fff;
+  color: red;
+  cursor: initial;
+  &:hover {
+    background-color: #fff;
+    color: red !important;
+  }
+}
+
+.btn--addSmall,
+.btn--outOfStock {
+  min-width: 152px !important;
+  padding: 1.2rem 4rem;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.btn--outOfStock {
+  background-image: initial;
+  background-color: #fff;
+  color: red;
+  cursor: initial;
+}
+
+.btn--subscribe {
+  @include respond(tab-other) {
+    margin-right: auto;
+  }
+}
+
+.btn--checkout {
+  flex: 0 0 40%;
+  font-size: 2rem;
+}
+.btn--cancel-2 {
+  flex: 0 0 40%;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  background-image: initial;
+  border: 1px solid #ccc;
+  background-color: $color-white-light;
+  color: $text-dark-light;
+  @include respond(tab-land) {
+    margin-bottom: 0;
+  }
+}
+
+.btn--signup,
+.btn--cancel {
+  font-size: 2vw;
+  padding: 1.3rem 6rem;
+  margin: 1rem;
+
+  @include respond(tab-other) {
+    font-size: $normal-text;
+    padding: 1.3rem 6rem;
+  }
+}
+.btn--cancel {
+  background-image: initial;
+  background-color: $color-white-light;
+  color: $text-dark-light;
+  &:hover {
+    background-color: rgb(238, 238, 238);
+  }
+}

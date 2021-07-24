@@ -1,0 +1,105 @@
+@import "../../../assets/scss/main.scss";
+
+.product {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  width: 50%;
+  min-width: 30rem;
+  border: 1px solid rgb(216, 216, 216);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  @include lighterShadow;
+  overflow: hidden;
+
+  @include respond(tab-other) {
+    width: 28%;
+    min-width: 31rem;
+  }
+
+  &-price {
+    font-size: 3.5rem !important;
+    font-weight: 600;
+  }
+
+  &-img-wrapper {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    min-width: 32rem;
+    height: 30rem;
+    padding: 1rem;
+    margin: 0 auto;
+
+    @include respond(tab-other) {
+      width: 100%;
+      justify-content: center;
+    }
+
+    & > img {
+      width: 50%;
+      height: 100%;
+      -o-object-fit: center;
+      object-fit: center;
+      @include respond(tab-other) {
+        width: 80%;
+      }
+    }
+  }
+
+  &-content {
+    padding-bottom: 3rem;
+    width: 100%;
+    height: 70%;
+    background-image: linear-gradient(315deg, #f8f8f8a6 0%, #e9e9e97e 74%);
+    & > p {
+      margin-top: 2rem;
+      font-size: 2rem;
+    }
+
+    &-group {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.added {
+  position: absolute;
+  right: 10%;
+  font-size: 1.3rem;
+  -webkit-animation: fadeup 0.4s linear;
+  animation: fadeup 0.4s linear;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeup {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-3px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-6px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeup {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-1.5px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-3px);
+    opacity: 0;
+  }
+}

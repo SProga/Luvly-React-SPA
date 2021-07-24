@@ -1,0 +1,21 @@
+@import "../../../assets/scss/main.scss";
+
+.like {
+  position: absolute;
+  top: -40rem;
+  right: 10.2rem;
+  cursor: pointer !important;
+  height: 3.2rem !important;
+  width: 3.2rem !important;
+  border: none;
+  background: none;
+  @include respond(tab-other) {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer !important;
+    height: 3.2rem !important;
+    width: 3.2rem !important;
+  }
+}
