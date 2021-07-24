@@ -9,16 +9,11 @@ import Button from "../UI/Button/Button";
 
 const Confirmation = () => {
   const dispatch = useDispatch();
-
+  const cart = { items: 0, totalQuantity: 0 };
   const closeConfirmationPage = () => {
     dispatch(uiActions.closeConfirmationPage());
     dispatch(cartActions.resetCart());
-    dispatch(
-      sendCartData({
-        items: [],
-        totalQuantity: 0,
-      })
-    );
+    dispatch(sendCartData(cart));
   };
 
   return (

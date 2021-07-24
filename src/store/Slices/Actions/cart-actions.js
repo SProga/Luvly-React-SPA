@@ -38,6 +38,7 @@ export const fetchCartData = () => {
 };
 
 export const sendCartData = (cart) => {
+  console.log(cart);
   let timer = null;
   clearTimeout(timer);
   return async (dispatch) => {
