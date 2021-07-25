@@ -35,13 +35,9 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-input,
-textarea,
-button,
-select,
-a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
-  -webkit-tap-highlight-color: transparent !important;
+button:focus:not(:focus-visible) {
+  box-shadow: none !important;
+  outline: 0 !important;
 }
 
 .container {
