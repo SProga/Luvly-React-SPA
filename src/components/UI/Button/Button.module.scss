@@ -106,18 +106,17 @@
 
 .btn--checkout,
 .btn--checkout:active {
-  flex: 0 1 40%;
-  font-size: Min(2vw, 2rem);
+  font-size: Min(3vw, 2rem);
+  padding: 1.5rem 6rem;
 }
 .btn--cancel-2,
 .btn--cancel-2:active {
-  flex: 0 1 40%;
-  margin-bottom: 3rem;
-  font-size: Min(2vw, 2rem);
+  font-size: Min(3vw, 2rem);
   background-image: initial;
   border: 1px solid #ccc;
   background-color: $color-white-light;
   color: $text-dark-light;
+  padding: 1.5rem 6rem;
   @include respond(tab-land) {
     margin-bottom: 0;
   }
