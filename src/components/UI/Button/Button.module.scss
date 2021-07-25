@@ -21,10 +21,9 @@
 .btn--cart:disabled {
   cursor: initial !important;
   background: #fbc5bf !important;
-  @include respond(desktop) {
-    &:hover {
-      background: #fbc5bf !important;
-    }
+
+  &:hover {
+    background: #fbc5bf !important;
   }
 }
 .btn--addSmall:disabled {
@@ -46,21 +45,19 @@
   background: #fbc5bf;
   color: #fff;
   margin-bottom: 2rem;
-  @include respond(desktop) {
-    &:hover {
-      background-color: #d8ada8;
-    }
+
+  &:hover {
+    background-color: #d8ada8;
   }
 }
 .btn--disabled {
   background-color: #fff;
   color: red;
   cursor: initial;
-  @include respond(desktop) {
-    &:hover {
-      background-color: #fff;
-      color: red !important;
-    }
+
+  &:hover {
+    background-color: #fff;
+    color: red !important;
   }
 }
 
@@ -116,9 +113,8 @@
   background-image: initial;
   background-color: $color-white-light;
   color: $text-dark-light;
-  @include respond(desktop) {
-    &:hover {
-      background-color: rgb(238, 238, 238);
-    }
+
+  &:hover {
+    background-color: rgb(238, 238, 238);
   }
 }

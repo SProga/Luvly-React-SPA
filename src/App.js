@@ -1,5 +1,5 @@
 import "./App.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import Splash from "./components/Header/SplashScreen/Splash";
 import Main from "./components/Main/Main";
@@ -23,6 +23,7 @@ import Notification from "./components/UI/Notification/Notification";
 let isInitial = true;
 
 function App() {
+  const [productRef, setProductRef] = useState(null);
   const cart = useSelector((state) => state.cart);
   const isLoggedIn = useSelector((state) => state.login.isLoggedIn);
   const notification = useSelector((state) => state.ui.notification);
@@ -30,6 +31,10 @@ function App() {
     (state) => state.ui.showConfirmationPage
   );
   const dispatch = useDispatch();
+
+  const scrollToHandler = (val) => {
+    setProductRef(val);
+  };
 
   useEffect(() => {
     dispatch(fetchCartData());
@@ -58,10 +63,10 @@ function App() {
       <Cart />
       <Login />
       <Header />
-      <Splash />
+      <Splash productSection={productRef} />
       <Main>
         <Reviews />
-        <Products />
+        <Products scrollTo={scrollToHandler} />
         <Categories />
         <Description />
         <Subscribe />

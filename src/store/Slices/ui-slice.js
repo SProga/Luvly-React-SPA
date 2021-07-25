@@ -27,6 +27,9 @@ const uiSlice = createSlice({
     openConfirmationPage(state) {
       state.showConfirmationPage = true;
     },
+    executeScroll(state, action) {
+      action.payload.current.scrollIntoView({ behavior: "smooth" });
+    },
   },
 });
 
