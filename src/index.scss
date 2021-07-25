@@ -1,5 +1,10 @@
 @import "./assets/scss/main.scss";
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
 *,
 *::after,
 *::before {
