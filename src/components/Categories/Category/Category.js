@@ -43,4 +43,4 @@ const Category = (props) => {
   );
 };
 
-export default Category;
+export default React.memo(Category);

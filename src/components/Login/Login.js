@@ -26,7 +26,7 @@ const Login = (props) => {
 
   const loginHandler = (e) => {
     e.preventDefault();
-    const isUsernameValid = username.current.value === "demo";
+    const isUsernameValid = username.current.value === "demo" || "Demo";
     const isPasswordValid = password.current.value === "luvly@123";
 
     if (isUsernameValid && isPasswordValid) {
@@ -63,7 +63,10 @@ const Login = (props) => {
             </h1>
             <div className={classes["form-group"]}>
               <label labelfor="username" onFocus={errorReset}>
-                Username:{" "}
+                Username:
+                <span>
+                  <small className={classes.color}>demo</small>
+                </span>
               </label>
               <input
                 type="text"
@@ -78,7 +81,12 @@ const Login = (props) => {
               )}
             </div>
             <div className={classes["form-group"]}>
-              <label labelfor="password">Password: </label>
+              <label labelfor="password">
+                Password:
+                <span>
+                  <small className={classes.color}>luvly@123</small>
+                </span>
+              </label>
               <div className={classes.inline}>
                 <input
                   type={showEye ? "password" : "text"}

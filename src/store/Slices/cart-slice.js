@@ -10,7 +10,7 @@ const cartSlice = createSlice({
     cartTotal: 0,
     itemRemoved: false,
     shippingTax: 0.1,
-    tax: 0.1,
+    tax: 0.01,
     cartTax: 0,
     shippingFee: 0,
     orderTotal: 0,

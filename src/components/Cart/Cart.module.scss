@@ -270,7 +270,7 @@ $height: 40vh;
   align-items: center;
   justify-content: space-evenly;
   padding-bottom: 4rem;
-  @include respond(tab-other) {
+  @include respond(tab-land) {
     flex-direction: row;
     padding-bottom: 0;
   }
