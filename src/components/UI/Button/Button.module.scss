@@ -10,8 +10,10 @@
   font-family: inherit;
   cursor: pointer;
   transition: color 100ms linear;
-  &:hover {
-    color: $primary-color;
+  @media (hover: hover) {
+    &:hover {
+      color: $primary-color;
+    }
   }
   &:focus {
     outline: none;
@@ -21,16 +23,19 @@
 .btn--cart:disabled {
   cursor: initial !important;
   background: #fbc5bf !important;
-
-  &:hover {
-    background: #fbc5bf !important;
+  @media (hover: hover) {
+    &:hover {
+      background: #fbc5bf !important;
+    }
   }
 }
 .btn--addSmall:disabled {
   cursor: initial !important;
   @include respond(desktop) {
-    &:hover {
-      color: #fff !important;
+    @media (hover: hover) {
+      &:hover {
+        color: #fff !important;
+      }
     }
   }
 }
@@ -45,9 +50,10 @@
   background: #fbc5bf;
   color: #fff;
   margin-bottom: 2rem;
-
-  &:hover {
-    background-color: #d8ada8;
+  @media (hover: hover) {
+    &:hover {
+      background-color: #d8ada8;
+    }
   }
 }
 .btn--disabled {
@@ -55,9 +61,11 @@
   color: red;
   cursor: initial;
 
-  &:hover {
-    background-color: #fff;
-    color: red !important;
+  @media (hover: hover) {
+    &:hover {
+      background-color: #fff;
+      color: red !important;
+    }
   }
 }
 
