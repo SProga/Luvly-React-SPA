@@ -2,21 +2,19 @@ import React from "react";
 import classes from "./Splash.module.scss";
 import Button from "../../UI/Button/Button";
 import SplashSofa from "../../../assets/img/furniture--01.png";
-import { useDispatch } from "react-redux";
-import { uiActions } from "../../../store/Slices/ui-slice";
 
 const Splash = (props) => {
   // run this function from an event handler or an effect to execute scroll
-  const dispatch = useDispatch();
 
   const scrollHandler = () => {
-    dispatch(uiActions.executeScroll(props.productSection));
+    props.productSection.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className={classes.splash}>
       <h1 className={`${classes.title} ${classes["mt-m"]}`}>
-        Enhance your room with a our <span className={classes.new}> new </span>
+        <span className={classes.fancy}>E</span>nhance your room with our{" "}
+        <span className={classes.new}> new </span>
         living room sets
       </h1>
       <div className={classes.wrapper}>

@@ -1,4 +1,4 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useRef, useEffect } from "react";
 import Product from "./Product/Product";
 import classes from "./Products.module.scss";
 import { products } from "../../toFirebase/data";
@@ -6,12 +6,18 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Products = (props) => {
+  //scrollto function
+  const { scrollTo } = props;
+
+  useEffect(() => {
+    scrollTo(productsRef);
+  }, [scrollTo]);
+
   const sets = products.map((product) => {
     const { id, name, price, src } = product;
     return <Product key={id} id={id} name={name} price={price} src={src} />;
   });
   const productsRef = useRef();
-  props.scrollTo(productsRef);
 
   return (
     <Fragment>

@@ -123,7 +123,7 @@ const Cart = (props) => {
             Cart is currently <span className={classes.color}>Empty</span>
           </p>
           <svg className="icon">
-            <use xlinkHref={`${Empty}#box`}></use>
+            <use xlinkHref={`${Empty}#empty`}></use>
           </svg>
         </div>
       </div>
