@@ -55,7 +55,7 @@ const Navigation = (props) => {
           <a href="/">About</a>
           {!isLoggedIn && (
             <a href="/" className={classes.btn} onClick={showLoginHandler}>
-              Join/Login
+              Login
             </a>
           )}
           {isLoggedIn && (
