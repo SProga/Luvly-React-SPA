@@ -56,6 +56,14 @@ order: Base + typography > general layout + grid > page layout > component
     }
   } //600px/16
 
+  @mixin respond($device) {
+    @if $device == desktop {
+      @media (hover: hover) and (pointer: fine) {
+        @content;
+      }
+    }
+  }
+
   @if $breakpoint== tab-port {
     @media only screen and (min-width: 56.25em) {
       @content;

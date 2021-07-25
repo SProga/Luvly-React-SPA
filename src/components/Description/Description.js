@@ -24,7 +24,7 @@ const Description = (props) => {
           <h1>Confirmation</h1>
           <p>
             Add Item to cart and confirm by
-            <span className={classes.color}> login</span> or by guest
+            <span className={classes.color}> login</span>
           </p>
         </div>
         <div className={classes["content-group"]}>

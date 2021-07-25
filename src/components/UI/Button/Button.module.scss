@@ -13,19 +13,26 @@
   &:hover {
     color: $primary-color;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .btn--cart:disabled {
   cursor: initial !important;
   background: #fbc5bf !important;
-  &:hover {
-    background: #fbc5bf !important;
+  @include respond(desktop) {
+    &:hover {
+      background: #fbc5bf !important;
+    }
   }
 }
 .btn--addSmall:disabled {
   cursor: initial !important;
-  &:hover {
-    color: #fff !important;
+  @include respond(desktop) {
+    &:hover {
+      color: #fff !important;
+    }
   }
 }
 
@@ -39,17 +46,21 @@
   background: #fbc5bf;
   color: #fff;
   margin-bottom: 2rem;
-  &:hover {
-    background-color: #d8ada8;
+  @include respond(desktop) {
+    &:hover {
+      background-color: #d8ada8;
+    }
   }
 }
 .btn--disabled {
   background-color: #fff;
   color: red;
   cursor: initial;
-  &:hover {
-    background-color: #fff;
-    color: red !important;
+  @include respond(desktop) {
+    &:hover {
+      background-color: #fff;
+      color: red !important;
+    }
   }
 }
 
@@ -105,7 +116,9 @@
   background-image: initial;
   background-color: $color-white-light;
   color: $text-dark-light;
-  &:hover {
-    background-color: rgb(238, 238, 238);
+  @include respond(desktop) {
+    &:hover {
+      background-color: rgb(238, 238, 238);
+    }
   }
 }
