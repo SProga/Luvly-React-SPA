@@ -11,6 +11,9 @@
   font-family: inherit;
   cursor: pointer;
   transition: color 100ms linear;
+  @media (hover: none) {
+    color: $color-white-light;
+  }
   @media (hover: hover) {
     &:hover {
       color: $primary-color;
@@ -23,15 +26,22 @@
 
 .btn--cart:disabled {
   cursor: initial !important;
-  background: #fbc5bf !important;
+  background: #fbc5bf;
+
+  @media (hover: none) {
+    background: #fbc5bf !important;
+  }
   @media (hover: hover) {
     &:hover {
-      background: #fbc5bf !important;
+      background: #fbc5bf;
     }
   }
 }
 .btn--addSmall:disabled {
   cursor: initial !important;
+  @media (hover: none) {
+    color: #fff !important;
+  }
   @include respond(desktop) {
     @media (hover: hover) {
       &:hover {
@@ -57,18 +67,18 @@
       background-color: #d8ada8;
     }
   }
+  @media (hover: none) {
+    background: #fbc5bf;
+  }
 }
 .btn--disabled,
 .btn--disabled:active {
   background-color: #fff;
   color: red;
   cursor: initial;
-
-  @media (hover: hover) {
-    &:hover {
-      background-color: #fff;
-      color: red !important;
-    }
+  &:hover {
+    background-color: #fff;
+    color: red !important;
   }
 }
 
@@ -130,9 +140,11 @@
   background-image: initial;
   background-color: $color-white-light;
   color: $text-dark-light;
-  @media (hover: hover) {
-    &:hover {
-      background-color: rgb(238, 238, 238);
-    }
+
+  &:hover {
+    background-color: rgb(238, 238, 238);
+  }
+  @media (hover: none) {
+    background-color: $color-white-light;
   }
 }
