@@ -1,0 +1,16 @@
+@import "../../../assets/scss/main.scss";
+
+.exclamation {
+  position: fixed;
+  top: 30%;
+  left: 90%;
+  z-index: 10000000000;
+  cursor: pointer;
+}
+
+.icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  fill: salmon !important;
+  cursor: pointer;
+}

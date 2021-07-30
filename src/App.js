@@ -19,6 +19,7 @@ import {
 } from "./store/Slices/Actions/cart-actions";
 import Confirmation from "./components/Confirmation/Confirmation";
 import Notification from "./components/UI/Notification/Notification";
+import Notice from "./components/UI/Notice/Notice";
 
 let isInitial = true;
 
@@ -52,6 +53,7 @@ function App() {
 
   return (
     <div className="App">
+      <Notice />
       {notification && (
         <Notification
           status={notification.status}
