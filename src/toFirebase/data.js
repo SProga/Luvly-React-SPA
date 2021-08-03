@@ -1,5 +1,3 @@
-import Table from "./pngegg.png";
-
 export const reviews = [
   {
     id: "p1",
@@ -22,19 +20,19 @@ export const products = [
   {
     id: "prd1",
     name: "Contemporary blue ",
-    src: "https://www.freepnglogos.com/uploads/furniture-png/furniture-how-share-tiny-apartment-with-your-significant-other-22.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/blue_couch_-GmkuiJnB.png?updatedAt=1628034132881",
     price: 54.99,
   },
   {
     id: "prd2",
     name: "Comfy Queen Bed ",
-    src: "https://pngimg.com/uploads/bed/bed_PNG17418.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/black_bed_BtTDhyknF.png?updatedAt=1628034181706",
     price: 1124.99,
   },
   {
     id: "prd3",
     name: "Traditional wooden square ",
-    src: "https://www.freepnglogos.com/uploads/furniture-png/furniture-png-transparent-furniture-images-pluspng-0.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/sexycouch_dIdskK-WZxF.png?updatedAt=1628034252194",
     price: 354.99,
   },
 ];
@@ -44,25 +42,25 @@ export const CategoryData = [
     id: "c1",
     category: "chairs",
     name: "Chairs",
-    src: "https://www.freepnglogos.com/uploads/furniture-png/furniture-png-transparent-images-png-only-34.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/gray_soft_seat_YiaMmEiYKO9.png?updatedAt=1628034296621",
   },
   {
     id: "c2",
     category: "sofa",
     name: "Sofas",
-    src: "https://www.freepnglogos.com/uploads/furniture-png/furniture-png-transparent-images-png-only-5.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/brown_sofa_qP4mi9A6PQ7.png?updatedAt=1628034344361",
   },
   {
     id: "c3",
     category: "beds",
     name: "Beds",
-    src: "https://www.freepnglogos.com/uploads/furniture-png/furniture-denton-bed-handmade-mid-century-modern-wood-bed-frame-35.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/brown_bed_5IWVKSSaNOl.png?updatedAt=1628034380966",
   },
   {
     id: "c4",
     category: "tables",
     name: "tables",
-    src: Table,
+    src: "https://ik.imagekit.io/edfgw98aksz/pngegg_ayumseBMhKU.png?updatedAt=1628034515216",
   },
 ];
 
@@ -70,49 +68,49 @@ export const productCat = [
   {
     id: "pc1",
     name: "beige soft seated chair",
-    src: "http://pngimg.com/uploads/chair/chair_PNG6887.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/nice_chair_CH-1btRP0hT.png?updatedAt=1628034563093",
     price: 78.99,
     category: "chairs",
   },
   {
     id: "pc2",
     name: "executives only",
-    src: "http://pngimg.com/uploads/chair/small/chair_PNG6886.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/executives_vzJTKcUw0oLQ.png?updatedAt=1628034600619",
     price: 299.99,
     category: "chairs",
   },
   {
     id: "pc3",
     name: "outdoor luxury",
-    src: "http://pngimg.com/uploads/chair/chair_PNG6851.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/black_chair_iiDZNadPSBP.png?updatedAt=1628034642020",
     price: 124.49,
     category: "chairs",
   },
   {
     id: "pc4",
     name: "blue steele decorative chair",
-    src: "http://pngimg.com/uploads/chair/small/chair_PNG6880.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/blue_chair_77aAIOin1_P.png?updatedAt=1628034673728",
     price: 78.99,
     category: "chairs",
   },
   {
     id: "pc5",
     name: "Mahogany Mixee Table",
-    src: "https://www.nicepng.com/png/full/852-8526113_3329-x-2514-2-kitchen-dining-room-table.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/mahogany_table_3z_Jj9giXmA.png?updatedAt=1628034725293",
     price: 2244.99,
     category: "tables",
   },
   {
     id: "pc6",
     name: "Antique Wooden Box Tea Table",
-    src: "https://www.nicepng.com/png/full/775-7753610_antique-wooden-box-tea-table-antique-wooden-box.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/furnished_table_mwR_PSAL8Ipbf.png?updatedAt=1628034760415",
     price: 1244.99,
     category: "tables",
   },
   {
     id: "pc7",
     name: "Canpony Bed",
-    src: "https://www.nicepng.com/png/full/7-73923_bed-png-bed-png-bed-png-images-free.png",
+    src: "https://ik.imagekit.io/edfgw98aksz/canopy_bed_CAvlIa5bLWb.png?updatedAt=1628034786026",
     price: 1500.0,
     category: "beds",
   },
