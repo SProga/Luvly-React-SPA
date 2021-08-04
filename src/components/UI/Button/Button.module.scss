@@ -135,6 +135,9 @@
     padding: 1.3rem 6rem;
   }
 }
+.btn--cancel:active {
+  background-color: $color-white-light;
+}
 .btn--cancel {
   background-image: initial;
   background-color: $color-white-light;
