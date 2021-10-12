@@ -8,32 +8,32 @@ import Success from "./success.svg";
 import Button from "../UI/Button/Button";
 
 const Confirmation = () => {
-  const dispatch = useDispatch();
-  const cart = { items: 0, totalQuantity: 0 };
-  const closeConfirmationPage = () => {
-    dispatch(uiActions.closeConfirmationPage());
-    dispatch(cartActions.resetCart());
-    dispatch(sendCartData(cart));
-  };
+	const dispatch = useDispatch();
+	const cart = { items: 0, totalQuantity: 0 };
+	const closeConfirmationPage = () => {
+		dispatch(uiActions.closeConfirmationPage());
+		dispatch(cartActions.resetCart());
+		dispatch(sendCartData(cart));
+	};
 
-  return (
-    <div className={classes.confirmation} onClick={closeConfirmationPage}>
-      <div className={classes.confirmationWrapper}>
-        <h1 className={classes.success}>
-          Order <span className={classes.color}>Successful</span>
-        </h1>
-        <p className={classes.thankyou}>Thank you for choosing Luvly!</p>
-        <svg className={classes.successImg}>
-          <use xlinkHref={`${Success}#checked`}></use>
-        </svg>
-        <div className={classes.center}>
-          <Button type="button" btn="btn--close" action={closeConfirmationPage}>
-            Close
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className={classes.confirmation} onClick={closeConfirmationPage}>
+			<div className={classes.confirmationWrapper}>
+				<h2 className={classes.success}>
+					Order <span className={classes.color}>Successful</span>
+				</h2>
+				<p className={classes.thankyou}>Thank you for choosing Luvly!</p>
+				<svg className={classes.successImg}>
+					<use xlinkHref={`${Success}#checked`}></use>
+				</svg>
+				<div className={classes.center}>
+					<Button type="button" btn="btn--close" action={closeConfirmationPage}>
+						Close
+					</Button>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Confirmation;

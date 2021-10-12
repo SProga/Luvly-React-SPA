@@ -6,45 +6,45 @@ import { CategoryData } from "../../toFirebase/data";
 import Category from "./Category/Category";
 
 const Categories = (props) => {
-  const [category, setCategory] = useState(null);
+	const [category, setCategory] = useState(null);
 
-  const showCategory = (cat) => {
-    setCategory(cat);
-  };
+	const showCategory = (cat) => {
+		setCategory(cat);
+	};
 
-  const allCategories = CategoryData.map((cat) => {
-    const { name, id, src } = cat;
-    return (
-      <div
-        className={classes.category}
-        key={id}
-        onClick={showCategory.bind(null, cat.category)}
-      >
-        <img className={classes["category-img"]} src={src} alt={name} />
-      </div>
-    );
-  });
+	const allCategories = CategoryData.map((cat) => {
+		const { name, id, src } = cat;
+		return (
+			<div
+				className={classes.category}
+				key={id}
+				onClick={showCategory.bind(null, cat.category)}>
+				<img className={classes["category-img"]} src={src} alt={name} />
+			</div>
+		);
+	});
 
-  return (
-    <section className={classes["categorySection"]}>
-      <h1 className={classes.title}>Choose A Category</h1>
-      <div className={classes.categories}>
-        <Carousel
-          centerSlidePercentage={45}
-          centerMode={true}
-          emulateTouch={true}
-          showThumbs={false}
-          showIndicators={true}
-        >
-          {allCategories}
-        </Carousel>
-      </div>
+	return (
+		<section className={classes["categorySection"]}>
+			<h2 className={classes.title}>
+				Choose A <span className={classes.color}>Category</span>
+			</h2>
+			<div className={classes.categories}>
+				<Carousel
+					centerSlidePercentage={45}
+					centerMode={true}
+					emulateTouch={true}
+					showThumbs={false}
+					showIndicators={true}>
+					{allCategories}
+				</Carousel>
+			</div>
 
-      <div className={classes.desktopCategories}>{allCategories}</div>
+			<div className={classes.desktopCategories}>{allCategories}</div>
 
-      <Category category={category} />
-    </section>
-  );
+			<Category category={category} />
+		</section>
+	);
 };
 
 export default Categories;
