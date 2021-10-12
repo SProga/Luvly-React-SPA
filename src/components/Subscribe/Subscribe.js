@@ -13,17 +13,23 @@ const Subscribe = () => {
 			<form action="#" onSubmit={formSubmitHandler} className={classes.form}>
 				<h2 className={classes["form-title"]}>Subscribe to Our New Letter</h2>
 				<div className={classes["form-group"]}>
-					<label className={classes["form-label"]}>Email </label>
+					<label className={classes["form-label"]} htmlFor="email">
+						Email{" "}
+					</label>
 					<input
-						tyoe="text"
+						id="email"
+						type="text"
 						className={classes["form-input"]}
 						placeholder="Enter Email"
 						maxLength="40"></input>
 				</div>
 				<div className={classes["form-group"]}>
-					<label className={classes["form-label"]}>First Name </label>
+					<label className={classes["form-label"]} htmlFor="firstName">
+						First Name{" "}
+					</label>
 					<input
-						tyoe="text"
+						id="firstName"
+						type="text"
 						className={classes["form-input"]}
 						placeholder="Enter FirstName"
 						maxLength="22"></input>

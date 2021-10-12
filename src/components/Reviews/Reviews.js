@@ -6,10 +6,10 @@ const Reviews = () => {
 	const allReviews = reviews.map((review) => {
 		return (
 			<div key={review.id} className={classes["review-group"]}>
-				<h2 className={classes["review-title"]}>
+				<p className={classes["review-title"]}>
 					{review.amount}
 					<span className={classes.plus}>+</span>
-				</h2>
+				</p>
 				<p className={classes["review-text"]}>{review.text}</p>
 			</div>
 		);
