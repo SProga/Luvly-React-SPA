@@ -5,6 +5,7 @@ import classes from "./Categories.module.scss";
 import { CategoryData } from "../../toFirebase/data";
 import Category from "./Category/Category";
 
+//version 2
 const Categories = (props) => {
 	const [category, setCategory] = useState(null);
 
