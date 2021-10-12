@@ -58,16 +58,16 @@
 	padding: 1.5rem 5rem;
 	font-size: 1.4rem;
 	background-image: revert !important;
-	background: #fbc5bf;
+	background: $secondary-color;
 	color: #fff;
 	margin-bottom: 2rem;
 	@media (hover: hover) {
 		&:hover {
-			background-color: #d8ada8;
+			background-color: $primary-color;
 		}
 	}
 	@media (hover: none) {
-		background: #fbc5bf;
+		background: $primary-color;
 	}
 }
 .btn--disabled,

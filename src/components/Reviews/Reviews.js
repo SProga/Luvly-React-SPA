@@ -6,11 +6,11 @@ const Reviews = () => {
 	const allReviews = reviews.map((review) => {
 		return (
 			<div key={review.id} className={classes["review-group"]}>
-				<p className={classes["review-title"]}>
+				<h3 className={classes["review-title"]}>
 					{review.amount}
 					<span className={classes.plus}>+</span>
-				</p>
-				<p className={classes["review-text"]}>{review.text}</p>
+				</h3>
+				<h3 className={classes["review-text"]}>{review.text}</h3>
 			</div>
 		);
 	});
