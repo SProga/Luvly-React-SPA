@@ -1,0 +1,63 @@
+@import "../../assets/scss/main.scss";
+
+.subscribe {
+  padding: 10rem 0;
+  max-width: $max-content;
+  margin: 0 auto;
+}
+
+.form {
+  position: relative;
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+  min-height: 10rem;
+  padding: 5rem 3rem;
+  border: 1px solid #ccc;
+  background-size: cover;
+  border-radius: 10px;
+  @include lightShadow;
+
+  @include respond(tab-other) {
+    width: 70%;
+  }
+
+  &-title {
+    text-align: left;
+    font-size: $header-text;
+    color: $text-dark-light;
+  }
+
+  &-group {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+  &-label {
+    font-size: $normal-text;
+    text-align: left;
+    width: 40%;
+  }
+  &-input {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 9px;
+    @include respond(tab-other) {
+      width: 50%;
+    }
+  }
+}
+
+.subscribeImg {
+  position: absolute;
+  top: 37%;
+  right: -27rem;
+  width: 47rem;
+  transform: translate(-50%, -50%);
+  display: none;
+  @include respond(tab-land) {
+    display: initial;
+  }
+}

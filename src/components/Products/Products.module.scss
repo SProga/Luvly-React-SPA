@@ -1,0 +1,49 @@
+@import "../../assets//scss/main.scss";
+
+.products {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+  width: 80%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  margin-top: 4rem;
+  text-align: left;
+  padding-left: 2rem;
+}
+
+.title {
+  font-size: $normal-text;
+  font-weight: 300;
+  max-width: $max-content;
+  margin: 0 auto;
+}
+.subtitle {
+  font-size: $header-text;
+  color: $text-dark-light;
+  max-width: $max-content;
+  margin: 0 auto;
+}
+.top {
+  color: $primary-color;
+}
+.mobileCarousel {
+  @include respond(tab-other) {
+    display: none;
+  }
+}
+.desktopProducts {
+  display: none;
+  max-width: $max-content;
+  margin: 0 auto;
+  @include respond(tab-other) {
+    display: flex;
+    justify-content: center;
+  }
+}

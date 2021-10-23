@@ -1,0 +1,98 @@
+@import "../../assets/scss/main.scss";
+
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include respond(tab-land) {
+    justify-content: center;
+  }
+
+  &--right {
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: fixed;
+    flex-wrap: wrap;
+    top: 14rem !important;
+    right: 0;
+    width: 100%;
+    @include glassGradient;
+    box-shadow: $box-shadow-light;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    transition: opacity 0.2s, transform 0.2s, visibility 0.3s;
+    z-index: 900;
+    padding: 0 0 10rem;
+    height: 100%;
+    & > a {
+      font-size: 3em;
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+      @include respond(tab-land) {
+        margin: 0 2rem;
+      }
+    }
+
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: row;
+      visibility: visible;
+      flex: 1 0 60%;
+      justify-content: center;
+      opacity: 1;
+      position: initial;
+      transform: initial;
+      min-height: initial;
+      @include glassGradient($evaluate: false);
+      box-shadow: none;
+      padding: 0;
+    }
+  }
+
+  &--collapsible {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include respond(tab-land) {
+      flex: 0 0 80%;
+      flex-direction: row;
+    }
+  }
+
+  &-menuBtn {
+    @include respond(tab-land) {
+      display: none !important;
+    }
+  }
+}
+
+.fadeOut {
+  transform: translateX(50rem);
+  width: 0;
+}
+
+.fadeIn {
+  display: flex;
+}
+
+.btn {
+  @include respond(tab-land) {
+    padding: 0.2rem 2rem;
+    border-radius: 30px;
+    font-size: 1.4rem !important;
+    background-color: $secondary-color;
+    color: $color-white-light !important;
+    display: flex;
+    align-items: center;
+  }
+}
