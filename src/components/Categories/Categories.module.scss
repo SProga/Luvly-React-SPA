@@ -1,0 +1,81 @@
+@import "../../assets/scss/main.scss";
+
+.categories {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+
+	@include respond(tab-other) {
+		display: none;
+	}
+}
+
+.title {
+	font-size: $header-text;
+	text-align: left;
+	padding-left: 2rem;
+	color: $text-dark-light;
+	max-width: $max-content;
+	margin: 0 auto;
+	margin-top: 2rem;
+}
+
+.desktopCategories {
+	display: none;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	max-width: $max-content;
+	margin: 0 auto;
+	@include respond(tab-other) {
+		display: flex;
+	}
+}
+
+.category {
+	position: relative;
+	height: 10rem;
+	width: 10rem;
+	border-radius: 50%;
+	background-color: rgba(236, 236, 236, 0.637);
+	margin: 2rem 0;
+	cursor: pointer;
+	@include respond(tab-other) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 20rem;
+		width: 20rem;
+		margin: 5rem 2rem;
+		&:hover {
+			background-color: rgba(149, 149, 149, 0.637);
+		}
+
+		@include respond(tab-land) {
+			height: 25rem;
+			width: 25rem;
+		}
+	}
+
+	@include lighterShadow;
+	&-img {
+		position: absolute;
+		top: 3rem;
+		left: 0;
+		height: 8rem;
+		width: 1rem;
+		@include respond(tab-other) {
+			position: initial;
+			width: 50%;
+			height: 50%;
+			-o-object-fit: center;
+			object-fit: center;
+		}
+	}
+}
+
+.color {
+	color: $primary-color;
+}

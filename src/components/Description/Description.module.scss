@@ -1,0 +1,40 @@
+@import "../../assets/scss/main.scss";
+
+.description {
+	@include darkGradient;
+}
+
+.content {
+	padding: 4rem 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	grid-auto-flow: row dense;
+	overflow: hidden;
+	&-group {
+		color: $color-white-light;
+		text-align: center;
+		& > h2 {
+			margin-top: 2rem;
+			font-size: 3rem;
+			letter-spacing: 2px;
+			font-weight: 300;
+			text-align: center;
+		}
+
+		& > p {
+			font-size: 2rem;
+			color: $color-white-light;
+			padding: 1rem;
+			font-weight: 200;
+		}
+	}
+
+	@include respond(tab-other) {
+		max-width: $max-content;
+		margin: 0 auto;
+	}
+}
+
+.color {
+	color: #ff7d4b;
+}

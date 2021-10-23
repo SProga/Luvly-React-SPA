@@ -1,0 +1,10 @@
+<svg width="0" height="0" class="hidden">
+  <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" id="empty">
+    <path fill="none" d="M0 0h50v50H0z"></path>
+    <circle cx="39" cy="46" fill="none" r="3" stroke="#000" stroke-miterlimit="10" stroke-width="2"></circle>
+    <circle cx="26" cy="46" fill="none" r="3" stroke="#000" stroke-miterlimit="10" stroke-width="2"></circle>
+    <circle cx="2" cy="4" r="2"></circle>
+    <path d="M41 43H25.709c-3.42 0-3.922-1.744-4.523-4.025L13.191 6.696C12.472 4.273 11.459 3 8.664 3H2" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.987"></path>
+    <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.987" d="M16 16h31l-7.191 19h-19.2"></path>
+  </symbol>
+</svg>
