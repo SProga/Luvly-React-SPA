@@ -8,12 +8,21 @@
 	flex-direction: column;
 	align-items: center;
 	border: 1px solid #ccc;
-	margin: 1rem;
+	margin: 2rem;
 	@include roundedBorders;
 	@include lighterShadow;
 
-	@include respond(tab-other) {
+	@include respond(tab-port) {
 		flex: 0 0 33%;
+	}
+	@include respond(tab-other) {
+		flex: 0 0 34%;
+		max-width: 40rem;
+		margin: 2rem 5rem;
+	}
+	@include respond(big-desktop) {
+		flex: 0 0 20%;
+		margin: 2rem;
 	}
 
 	&-wrapper {
