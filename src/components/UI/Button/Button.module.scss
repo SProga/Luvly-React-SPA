@@ -98,9 +98,10 @@
 }
 
 .btn--subscribe {
-	padding: 1.3rem 6rem;
-	@include respond(tab-other) {
+	padding: 2rem 6rem;
+	@include respond(tab-land) {
 		margin-right: auto;
+		padding: 1.3rem 10rem;
 	}
 }
 
