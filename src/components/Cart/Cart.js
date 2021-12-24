@@ -134,19 +134,22 @@ const Cart = (props) => {
 		<React.Fragment>
 			{showModal && (
 				<Modal onClose={closeModal}>
-					<div className={classes.wishList}>
-						<Button type="button" btn="btn--wishList">
-							<img src={WishList} alt="" />
-						</Button>
-						<span className={classes["wishList--items"]}>
-							{wishList.length}
-						</span>
-					</div>
-
 					<div className={classes.cartWrapper}>
-						<h1 className={classes.title}>
-							Your <span className={classes.color}>Cart</span>
-						</h1>
+						<div className={classes.cartTitle}>
+							<h1 className={classes.title}>
+								Your <span className={classes.color}>Cart</span>
+							</h1>
+
+							<div className={classes.wishList}>
+								<Button type="button" btn="btn--wishList">
+									<img src={WishList} alt="" />
+								</Button>
+								<span className={classes["wishList--items"]}>
+									{wishList.length}
+								</span>
+							</div>
+						</div>
+
 						<div className={classes.cart}>{cartData}</div>
 					</div>
 					<div className={classes["checkout"]}>

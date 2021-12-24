@@ -27,6 +27,7 @@ const Categories = (props) => {
 
 	return (
 		<section className={classes["categorySection"]}>
+			<h2 className={classes.catTitle}>Category</h2>
 			<h2 className={classes.title}>
 				Choose A <span className={classes.color}>Category</span>
 			</h2>

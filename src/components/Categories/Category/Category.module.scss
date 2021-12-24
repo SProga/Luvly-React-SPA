@@ -1,10 +1,20 @@
 @import "../../../assets/scss/main.scss";
 
 .category {
-	min-height: 40rem;
-	margin-top: 5rem; //testing
+	min-height: 60rem;
+	margin-top: 10rem; //testing
 	padding-bottom: 5rem;
 }
+
+.categoryTitle {
+	text-align: left;
+	font-size: $normal-text;
+	font-weight: 300;
+	max-width: $max-content;
+	margin: 0 auto;
+	padding-left: 2rem;
+}
+
 .title {
 	font-size: $header-text;
 	text-align: left;
@@ -33,5 +43,5 @@
 	width: 100%;
 	margin-top: 5rem;
 	font-size: $header-text;
-	color: rgb(173, 200, 230);
+	color: $primary-color;
 }

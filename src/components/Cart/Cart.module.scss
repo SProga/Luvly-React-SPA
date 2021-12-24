@@ -63,6 +63,7 @@ $height: 40vh;
 	}
 
 	&-wrapper {
+		position: relative;
 		flex: 0 0 40%;
 		height: 9rem;
 		display: flex;
@@ -179,22 +180,27 @@ $height: 40vh;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		font-size: 1.5rem;
+
 		&-title {
 			flex: 0 0 15%;
+
 			& + p {
 				color: $primary-color;
 				font-weight: 600;
 			}
+			& + p + p {
+				min-width: 10rem;
+			}
 		}
 	}
 	&-total {
-		width: 60%;
+		width: 62%;
 		margin: 2rem auto;
 		justify-content: space-evenly;
 		padding: 1rem 0;
 		border-top: 1px dotted #ccc;
 		&-title {
-			flex: 1 0 27%;
+			flex: 1 0 24%;
 			text-transform: uppercase;
 			font-weight: 600;
 			font-size: $normal-text;
@@ -229,7 +235,12 @@ $height: 40vh;
 .cart {
 	height: $height;
 }
-
+.cartTitle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 6rem;
+}
 .empty {
 	position: relative;
 	width: 100%;
@@ -294,6 +305,33 @@ $height: 40vh;
 }
 
 .wishList {
+	position: relative;
+	margin-left: auto;
+	margin-top: -2rem;
+
+	&::after {
+		visibility: hidden;
+		content: "wish list";
+		position: absolute;
+		padding: 0.2rem 2rem;
+		width: -webkit-max-content;
+		width: -moz-max-content;
+		background: #333333;
+		width: max-content;
+		color: #fff;
+		border-radius: 5px;
+		font-size: 1rem;
+		top: 2rem;
+		right: 4rem;
+		z-index: 99999;
+	}
+
+	@media (hover: hover) {
+		&:hover::after {
+			visibility: visible;
+		}
+	}
+
 	&--items {
 		display: flex;
 		justify-content: center;
@@ -305,7 +343,7 @@ $height: 40vh;
 		background-color: black;
 		font-size: 1.5rem;
 		position: absolute;
-		right: 7.5rem;
-		top: 2rem;
+		right: 0;
+		top: 4.4rem;
 	}
 }
