@@ -11,7 +11,7 @@ const Subscribe = () => {
 	return (
 		<div className={classes.subscribe}>
 			<form action="#" onSubmit={formSubmitHandler} className={classes.form}>
-				<h2 className={classes["form-title"]}>Subscribe to Our New Letter</h2>
+				<h2 className={classes["form-title"]}>Subscribe to Our NewsLetter</h2>
 				<div className={classes["form-group"]}>
 					<label className={classes["form-label"]} htmlFor="email">
 						Email{" "}

@@ -1,13 +1,30 @@
-import React, { Fragment, useRef, useEffect } from "react";
+import React, { Fragment, useRef, useEffect, useState } from "react";
 import Product from "./Product/Product";
 import classes from "./Products.module.scss";
 import { products } from "../../toFirebase/data";
 import { Carousel } from "react-responsive-carousel";
+import Responsive from "../Responsive/Responsive";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+let mobile;
+let firstLoad = true;
 const Products = (props) => {
 	//scrollto function
 	const { scrollTo } = props;
+	const [isMobile, setIsMobile] = useState("");
+
+	useEffect(() => {
+		if (firstLoad) {
+			mobile = Responsive();
+			firstLoad = false;
+			setIsMobile(mobile);
+		} else {
+			window.addEventListener("resize", () => {
+				mobile = Responsive();
+				setIsMobile(mobile);
+			});
+		}
+	}, [isMobile]);
 
 	useEffect(() => {
 		scrollTo(productsRef);
@@ -17,6 +34,7 @@ const Products = (props) => {
 		const { id, name, price, src } = product;
 		return <Product key={id} id={id} name={name} price={price} src={src} />;
 	});
+
 	const productsRef = useRef();
 
 	return (
@@ -31,16 +49,17 @@ const Products = (props) => {
 					</h3>
 				</div>
 
-				<div className={classes.mobileCarousel}>
-					<Carousel
-						emulateTouch={true}
-						showThumbs={false}
-						showIndicators={false}>
-						{sets}
-					</Carousel>
-				</div>
-
-				<div className={classes.desktopProducts}>{sets}</div>
+				{isMobile && (
+					<div className={classes.mobileCarousel}>
+						<Carousel
+							emulateTouch={true}
+							showThumbs={false}
+							showIndicators={false}>
+							{sets}
+						</Carousel>
+					</div>
+				)}
+				{!isMobile && <div className={classes.desktopProducts}>{sets}</div>}
 			</div>
 		</Fragment>
 	);

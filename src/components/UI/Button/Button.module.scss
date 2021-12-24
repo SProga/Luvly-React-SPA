@@ -105,6 +105,17 @@
 	}
 }
 
+.btn--wishList {
+	background: none;
+	position: absolute;
+	right: 8rem;
+	top: -1rem;
+	padding: 1rem;
+	img {
+		width: 3.2rem;
+	}
+}
+
 .btn--checkout,
 .btn--checkout:active {
 	font-size: Min(3vw, 2rem);
