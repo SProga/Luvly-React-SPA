@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import like from "./img/like.svg";
 import classes from "./Like.module.scss";
 import love from "./img/love.svg";
-import { useSelector } from "react-redux";
 
 const Like = ({ wishListHandler, isLiked = false }) => {
 	const [liked, setLiked] = useState(isLiked);

@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./Splash.module.scss";
 import Button from "../../UI/Button/Button";
 import SplashSofa from "../../../assets/img/furniture--01.png";
-import LivingRoom from "../../../assets/img/livingRoomSet.png";
 
 const Splash = (props) => {
 	// run this function from an event handler or an effect to execute scroll
