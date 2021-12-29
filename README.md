@@ -10,7 +10,7 @@ This application was created by Shane A. Proverbs.
 To see the full demo of the app click the image below or link: - https://luvlyapp.vercel.app/
 
 
-<a href="https://luvlyapp.vercel.app/"><img src="./luvly.png" /></a>
+<a href="https://luvlyapp.vercel.app/"><img src="./screenshot.png" /></a>
 
 
 
